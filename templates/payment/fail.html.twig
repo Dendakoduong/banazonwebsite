@@ -3,11 +3,11 @@
 {% block title %}My order{% endblock %}
 
 {% block body %}
-    <h2>Cancellation of your order</h2>
+    <h2>Your order has been cancelled :(</h2>
     <p>
         Hi {{order.user.firstname}} {{order.user.lastname}}, <br>
         Your payment for order No. <b>{{order.reference}}</b> was unsuccessful.<br>
     </p>
-    <hr>
-    <a class="btn btn-outline-success" href="{{ path('order') }}">Try again</a>
+    <br>
+    <a class="btn btn-primary" href="{{ path('order') }}">Try again</a>
 {% endblock %}
