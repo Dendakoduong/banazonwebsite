@@ -1,0 +1,36 @@
+<footer class="footer" style="background-color: #f1f1f1; position: fixed; bottom: 0; width: 100%; height: 60px; transition: transform 0.3s ease-in-out;">
+    <div class="footer-content" style="display: flex; align-items: center; justify-content: space-between; height: 100%; padding: 0 20px;">
+        <div class="left-section" style="display: flex; flex-direction: column; align-items: flex-start;">
+            <small>&copy; 1996-2023, Banazon, Inc. or its affiliates</small>
+            <small style="margin-top: 5px;">
+                <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=508088&ref_=footer_cou">Conditions of Use</a>
+                &nbsp;|&nbsp;
+                <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=468496&ref_=footer_privacy">Privacy Notice</a>
+                &nbsp;|&nbsp;
+                <a href="https://www.facebook.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="Facebook" style="height: 15px;"></a>
+                &nbsp;
+                <a href="https://www.twitter.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter" style="height: 15px;"></a>
+                &nbsp;
+                <a href="https://www.tiktok.com/" target="_blank"><img src="https://www.svgrepo.com/show/327400/logo-tiktok.svg" alt="TikTok" style="height: 15px;"></a>
+            </small>
+        </div>
+        <div class="right-section" style="display: flex; align-items: center;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" style="height: 20px; margin-left: 10px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg" alt="MasterCard" style="height: 25px; margin-left: 10px;">
+            <img src="http://online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoSaleNoti.png" alt="CCDV" style="height: 30px; margin-left: 10px;">
+        </div>
+    </div>
+</footer>
+
+<script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.querySelector('.footer').style.transform = "translateY(0)";
+        } else {
+            document.querySelector('.footer').style.transform = "translateY(100%)";
+        }
+        prevScrollpos = currentScrollPos;
+    }
+</script>

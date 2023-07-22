@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Order details{% endblock %}
+
+{% block body %}
+    <h2>Details of order {{order.reference}}</h2>
+    <hr>
+    <p>
+        <b>Order date :</b> {{order.createdAt|date('d/m/Y')}} <br>
+        <b>Status:</b> {{
+            order.state == 1 ? 'Payment accepted' :
+            order.state == 2 ? 'In preparation': 'Shipped'
+        }}<br>
+        <b>Reference : </b><span>{{order.reference}}</span><br>
+        <b>Carrier:</b> {{order.carrierName}}<br>
+    </p>
+    <h5>Here's your order</h5>
+    <table class="table mt-4">
+    <thead>
+        <tr>
+            <th scope="col">Items</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Unit Price </th>
+            <th scope="col">Total</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for product in order.orderDetails %}
+            <tr>
+                <td>{{product.product}}</td>
+                <td>x{{product.quantity}}</td>
+                <td>{{(product.price / 100)|number_format(2,',','.') }} $</td>
+                <td>{{(product.total / 100)|number_format(2,',','.') }} $</td>
+            </tr>
+        {% endfor %}
+            <tr>
+                <th>Total price</th>
+                <td></td>
+                <td></td>
+                <td class="font-weight-bold text-danger">{{(order.total / 100)|number_format(2,',','.') }} $</td>
+            </tr>
+    </tbody>
+</table>
+    <div class="text-right">
+        <b>Shipping fee:</b> {{(order.carrierPrice / 100)|number_format(2,',','.') }} $<br>
+        <b>Subtotal: </b> {{((order.carrierPrice + order.total) / 100)|number_format(2,',','.') }} $
+    </div>
+    <a title="Back to my account"href="{{ path('account') }}"><i class='fas fa-angle-left' style='font-size:15px'></i> Return to My Account</a>
+{% endblock %}
