@@ -44,7 +44,7 @@ class OrderType extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'user' => []       // Retrieve the user variable passed in the contoller to pass it to the buildForm options
+            'user' => []       // Retrieve the user variable passed in the controller to pass it to the buildForm options
         ]);
     }
 }
