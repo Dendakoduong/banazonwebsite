@@ -62,7 +62,7 @@ class RegisterType extends AbstractType
                         'message' => 'Please enter a password',
                     ]),
                     new Length([
-                        'min' => 4,
+                        'min' => 8,
                         'minMessage' => 'Your password must contain at least 8 characters',
                         'max' => 4096,
                     ]),
