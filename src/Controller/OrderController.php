@@ -80,6 +80,7 @@ class OrderController extends AbstractController
             $delivery_string .= '<br>' . $address->getCity();
             $delivery_string .= ', ' . $address->getCountry();
             $delivery_string .= '<br>' . $address->getCompany() ?? '';
+            //$delivery_string .= '<br>' . $address->getCity() . ', ' . $address->getCountry();
 
             $cartProducts = $cart->getDetails();
 
@@ -95,6 +96,8 @@ class OrderController extends AbstractController
                 ->setState(0)
                 ->setReference($date->format('YmdHis') . '-' . uniqid())
             ;
+            // Set the delivery attribute before persisting the order
+            $order->setDelivery($delivery_string);
             $em->persist($order);
 
             //Create detail lines for each of the products in the order
