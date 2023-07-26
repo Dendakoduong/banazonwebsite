@@ -103,24 +103,30 @@ class __TwigTemplate_00ad75f54ed66b689dfa9907a4d5c1c5 extends Template
         // line 12
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 12, $this->source); })()), "subtitle", [], "any", false, false, false, 12), "html", null, true);
         echo "</p>
-            <span class=\"product-price\">";
+            <h6>Category: ";
         // line 13
-        echo twig_escape_filter($this->env, twig_number_format_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 13, $this->source); })()), "price", [], "any", false, false, false, 13) / 100), 2, ",", "."), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 13, $this->source); })()), "category", [], "any", false, false, false, 13), "html", null, true);
+        echo "</h6>
+            <hr>
+            <span class=\"product-price\">Price: ";
+        // line 15
+        echo twig_escape_filter($this->env, twig_number_format_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 15, $this->source); })()), "price", [], "any", false, false, false, 15) / 100), 2, ",", "."), "html", null, true);
         echo " USD</span>
             <hr>
+            <h6>Description</h6>
             <p>";
-        // line 15
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 15, $this->source); })()), "description", [], "any", false, false, false, 15), "html", null, true);
+        // line 18
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 18, $this->source); })()), "description", [], "any", false, false, false, 18), "html", null, true);
         echo "</p>
             <div class=\"d-flex justify-content-start align-items-center mb-3\">
                 <a href=\"";
-        // line 17
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add_to_cart", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 17, $this->source); })()), "id", [], "any", false, false, false, 17)]), "html", null, true);
+        // line 20
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add_to_cart", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 20, $this->source); })()), "id", [], "any", false, false, false, 20)]), "html", null, true);
         echo "\" class=\"btn btn-outline-success mr-3\">
                     <i class=\"fas fa-cart-plus\"></i> Add to Cart
                 </a>
 ";
-        // line 23
+        // line 26
         echo "            </div>
         </div>
     </div>
@@ -176,7 +182,7 @@ class __TwigTemplate_00ad75f54ed66b689dfa9907a4d5c1c5 extends Template
 
     public function getDebugInfo()
     {
-        return array (  124 => 23,  118 => 17,  113 => 15,  108 => 13,  104 => 12,  100 => 11,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  130 => 26,  124 => 20,  119 => 18,  113 => 15,  108 => 13,  104 => 12,  100 => 11,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -193,8 +199,11 @@ class __TwigTemplate_00ad75f54ed66b689dfa9907a4d5c1c5 extends Template
         <div class=\"col-md-7 my-auto\">
             <h3><i class='fab fa-apple' style='font-size:36px'></i> {{ product.name }}</h3>
             <p>{{ product.subtitle }}</p>
-            <span class=\"product-price\">{{ (product.price / 100)|number_format(2, ',', '.') }} USD</span>
+            <h6>Category: {{ product.category }}</h6>
             <hr>
+            <span class=\"product-price\">Price: {{ (product.price / 100)|number_format(2, ',', '.') }} USD</span>
+            <hr>
+            <h6>Description</h6>
             <p>{{ product.description }}</p>
             <div class=\"d-flex justify-content-start align-items-center mb-3\">
                 <a href=\"{{ path('add_to_cart', {id: product.id}) }}\" class=\"btn btn-outline-success mr-3\">
@@ -238,6 +247,6 @@ class __TwigTemplate_00ad75f54ed66b689dfa9907a4d5c1c5 extends Template
         <small>* For more information, please contact the customer support.</small>
     </div>
 {% endblock %}
-", "product/show.html.twig", "C:\\Users\\Acer\\ecommerce-symfony\\templates\\product\\show.html.twig");
+", "product/show.html.twig", "C:\\Users\\Acer\\banazonweb\\templates\\product\\show.html.twig");
     }
 }

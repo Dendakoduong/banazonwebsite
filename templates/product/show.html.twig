@@ -10,8 +10,11 @@
         <div class="col-md-7 my-auto">
             <h3><i class='fab fa-apple' style='font-size:36px'></i> {{ product.name }}</h3>
             <p>{{ product.subtitle }}</p>
-            <span class="product-price">{{ (product.price / 100)|number_format(2, ',', '.') }} USD</span>
+            <h6>Category: {{ product.category }}</h6>
             <hr>
+            <span class="product-price">Price: {{ (product.price / 100)|number_format(2, ',', '.') }} USD</span>
+            <hr>
+            <h6>Description</h6>
             <p>{{ product.description }}</p>
             <div class="d-flex justify-content-start align-items-center mb-3">
                 <a href="{{ path('add_to_cart', {id: product.id}) }}" class="btn btn-outline-success mr-3">
