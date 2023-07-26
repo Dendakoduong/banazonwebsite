@@ -1,6 +1,13 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Order details{% endblock %}
+{% block stylesheets %}
+    <style>
+        .underline {
+            text-decoration: underline;
+        }
+    </style>
+{% endblock %}
 
 {% block body %}
     <h2>Details of order {{order.reference}}</h2>
@@ -13,6 +20,8 @@
         }}<br>
         <b>Reference : </b><span>{{order.reference}}</span><br>
         <b>Carrier:</b> {{order.carrierName}}<br>
+        <b>Delivery details:</b> <br>
+        <span class="underline">{{ order.delivery|raw }}</span><br>
     </p>
     <h5>Here's your order</h5>
     <table class="table mt-4">

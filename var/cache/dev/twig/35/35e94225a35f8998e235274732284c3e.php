@@ -87,7 +87,7 @@ class __TwigTemplate_3929a51c2b2c3b525cf7848b42ee4c8b extends Template
         // line 6
         echo "    <a href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("account_address_new");
-        echo "\" class=\"btn btn-info btn-sm float-right mt-2\">Add new address</a>
+        echo "\" class=\"btn btn-info btn-sm float-right mt-2\">New address</a>
     <h2>Manage address</h2>
 
     <div class=\"row mt-3\">
@@ -185,7 +185,7 @@ class __TwigTemplate_3929a51c2b2c3b525cf7848b42ee4c8b extends Template
 {% block title %}My address{% endblock %}
 
 {% block body %}
-    <a href=\"{{ path('account_address_new') }}\" class=\"btn btn-info btn-sm float-right mt-2\">Add new address</a>
+    <a href=\"{{ path('account_address_new') }}\" class=\"btn btn-info btn-sm float-right mt-2\">New address</a>
     <h2>Manage address</h2>
 
     <div class=\"row mt-3\">
@@ -214,6 +214,6 @@ class __TwigTemplate_3929a51c2b2c3b525cf7848b42ee4c8b extends Template
     </div>
     <a title=\"Back to Your Account\"href=\"{{ path('account') }}\"><i class='fas fa-angle-left' style='font-size:15px'></i> Return to my account</a>
 {% endblock %}
-", "account/address.html.twig", "C:\\Users\\Acer\\ecommerce-symfony\\templates\\account\\address.html.twig");
+", "account/address.html.twig", "C:\\Users\\Acer\\banazonweb\\templates\\account\\address.html.twig");
     }
 }

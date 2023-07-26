@@ -26,6 +26,7 @@ class __TwigTemplate_5f8f1172914ca8a975fb1159643cf038 extends Template
 
         $this->blocks = [
             'title' => [$this, 'block_title'],
+            'stylesheets' => [$this, 'block_stylesheets'],
             'body' => [$this, 'block_body'],
         ];
     }
@@ -74,7 +75,32 @@ class __TwigTemplate_5f8f1172914ca8a975fb1159643cf038 extends Template
 
     }
 
-    // line 5
+    // line 4
+    public function block_stylesheets($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
+
+        // line 5
+        echo "    <style>
+        .underline {
+            text-decoration: underline;
+        }
+    </style>
+";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+    }
+
+    // line 12
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -84,31 +110,36 @@ class __TwigTemplate_5f8f1172914ca8a975fb1159643cf038 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
+        // line 13
         echo "    <h2>Details of order ";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 6, $this->source); })()), "reference", [], "any", false, false, false, 6), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 13, $this->source); })()), "reference", [], "any", false, false, false, 13), "html", null, true);
         echo "</h2>
     <hr>
     <p>
         <b>Order date :</b> ";
-        // line 9
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 9, $this->source); })()), "createdAt", [], "any", false, false, false, 9), "d/m/Y"), "html", null, true);
+        // line 16
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 16, $this->source); })()), "createdAt", [], "any", false, false, false, 16), "d/m/Y"), "html", null, true);
         echo " <br>
         <b>Status:</b> ";
-        // line 10
-        echo (((twig_get_attribute($this->env, $this->source,         // line 11
-(isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 11, $this->source); })()), "state", [], "any", false, false, false, 11) == 1)) ? ("Payment accepted") : ((((twig_get_attribute($this->env, $this->source,         // line 12
-(isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 12, $this->source); })()), "state", [], "any", false, false, false, 12) == 2)) ? ("In preparation") : ("Shipped"))));
-        // line 13
+        // line 17
+        echo (((twig_get_attribute($this->env, $this->source,         // line 18
+(isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 18, $this->source); })()), "state", [], "any", false, false, false, 18) == 1)) ? ("Payment accepted") : ((((twig_get_attribute($this->env, $this->source,         // line 19
+(isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 19, $this->source); })()), "state", [], "any", false, false, false, 19) == 2)) ? ("In preparation") : ("Shipped"))));
+        // line 20
         echo "<br>
         <b>Reference : </b><span>";
-        // line 14
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 14, $this->source); })()), "reference", [], "any", false, false, false, 14), "html", null, true);
+        // line 21
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 21, $this->source); })()), "reference", [], "any", false, false, false, 21), "html", null, true);
         echo "</span><br>
         <b>Carrier:</b> ";
-        // line 15
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 15, $this->source); })()), "carrierName", [], "any", false, false, false, 15), "html", null, true);
+        // line 22
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 22, $this->source); })()), "carrierName", [], "any", false, false, false, 22), "html", null, true);
         echo "<br>
+        <b>Delivery details:</b> <br>
+        <span class=\"underline\">";
+        // line 24
+        echo twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 24, $this->source); })()), "delivery", [], "any", false, false, false, 24);
+        echo "</span><br>
     </p>
     <h5>Here's your order</h5>
     <table class=\"table mt-4\">
@@ -123,27 +154,27 @@ class __TwigTemplate_5f8f1172914ca8a975fb1159643cf038 extends Template
     </thead>
     <tbody>
         ";
-        // line 29
+        // line 38
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 29, $this->source); })()), "orderDetails", [], "any", false, false, false, 29));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 38, $this->source); })()), "orderDetails", [], "any", false, false, false, 38));
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
-            // line 30
+            // line 39
             echo "            <tr>
                 <td>";
-            // line 31
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "product", [], "any", false, false, false, 31), "html", null, true);
+            // line 40
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "product", [], "any", false, false, false, 40), "html", null, true);
             echo "</td>
                 <td>x";
-            // line 32
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "quantity", [], "any", false, false, false, 32), "html", null, true);
+            // line 41
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "quantity", [], "any", false, false, false, 41), "html", null, true);
             echo "</td>
                 <td>";
-            // line 33
-            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, (twig_get_attribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 33) / 100), 2, ",", "."), "html", null, true);
+            // line 42
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, (twig_get_attribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 42) / 100), 2, ",", "."), "html", null, true);
             echo " \$</td>
                 <td>";
-            // line 34
-            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, (twig_get_attribute($this->env, $this->source, $context["product"], "total", [], "any", false, false, false, 34) / 100), 2, ",", "."), "html", null, true);
+            // line 43
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, (twig_get_attribute($this->env, $this->source, $context["product"], "total", [], "any", false, false, false, 43) / 100), 2, ",", "."), "html", null, true);
             echo " \$</td>
             </tr>
         ";
@@ -151,30 +182,30 @@ class __TwigTemplate_5f8f1172914ca8a975fb1159643cf038 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 37
+        // line 46
         echo "            <tr>
                 <th>Total price</th>
                 <td></td>
                 <td></td>
                 <td class=\"font-weight-bold text-danger\">";
-        // line 41
-        echo twig_escape_filter($this->env, twig_number_format_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 41, $this->source); })()), "total", [], "any", false, false, false, 41) / 100), 2, ",", "."), "html", null, true);
+        // line 50
+        echo twig_escape_filter($this->env, twig_number_format_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 50, $this->source); })()), "total", [], "any", false, false, false, 50) / 100), 2, ",", "."), "html", null, true);
         echo " \$</td>
             </tr>
     </tbody>
 </table>
     <div class=\"text-right\">
         <b>Shipping fee:</b> ";
-        // line 46
-        echo twig_escape_filter($this->env, twig_number_format_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 46, $this->source); })()), "carrierPrice", [], "any", false, false, false, 46) / 100), 2, ",", "."), "html", null, true);
+        // line 55
+        echo twig_escape_filter($this->env, twig_number_format_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 55, $this->source); })()), "carrierPrice", [], "any", false, false, false, 55) / 100), 2, ",", "."), "html", null, true);
         echo " \$<br>
         <b>Subtotal: </b> ";
-        // line 47
-        echo twig_escape_filter($this->env, twig_number_format_filter($this->env, ((twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 47, $this->source); })()), "carrierPrice", [], "any", false, false, false, 47) + twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 47, $this->source); })()), "total", [], "any", false, false, false, 47)) / 100), 2, ",", "."), "html", null, true);
+        // line 56
+        echo twig_escape_filter($this->env, twig_number_format_filter($this->env, ((twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 56, $this->source); })()), "carrierPrice", [], "any", false, false, false, 56) + twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 56, $this->source); })()), "total", [], "any", false, false, false, 56)) / 100), 2, ",", "."), "html", null, true);
         echo " \$
     </div>
     <a title=\"Back to my account\"href=\"";
-        // line 49
+        // line 58
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("account");
         echo "\"><i class='fas fa-angle-left' style='font-size:15px'></i> Return to My Account</a>
 ";
@@ -198,7 +229,7 @@ class __TwigTemplate_5f8f1172914ca8a975fb1159643cf038 extends Template
 
     public function getDebugInfo()
     {
-        return array (  178 => 49,  173 => 47,  169 => 46,  161 => 41,  155 => 37,  146 => 34,  142 => 33,  138 => 32,  134 => 31,  131 => 30,  127 => 29,  110 => 15,  106 => 14,  103 => 13,  101 => 12,  100 => 11,  99 => 10,  95 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  209 => 58,  204 => 56,  200 => 55,  192 => 50,  186 => 46,  177 => 43,  173 => 42,  169 => 41,  165 => 40,  162 => 39,  158 => 38,  141 => 24,  136 => 22,  132 => 21,  129 => 20,  127 => 19,  126 => 18,  125 => 17,  121 => 16,  114 => 13,  104 => 12,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -206,6 +237,13 @@ class __TwigTemplate_5f8f1172914ca8a975fb1159643cf038 extends Template
         return new Source("{% extends 'base.html.twig' %}
 
 {% block title %}Order details{% endblock %}
+{% block stylesheets %}
+    <style>
+        .underline {
+            text-decoration: underline;
+        }
+    </style>
+{% endblock %}
 
 {% block body %}
     <h2>Details of order {{order.reference}}</h2>
@@ -218,6 +256,8 @@ class __TwigTemplate_5f8f1172914ca8a975fb1159643cf038 extends Template
         }}<br>
         <b>Reference : </b><span>{{order.reference}}</span><br>
         <b>Carrier:</b> {{order.carrierName}}<br>
+        <b>Delivery details:</b> <br>
+        <span class=\"underline\">{{ order.delivery|raw }}</span><br>
     </p>
     <h5>Here's your order</h5>
     <table class=\"table mt-4\">
@@ -253,6 +293,6 @@ class __TwigTemplate_5f8f1172914ca8a975fb1159643cf038 extends Template
     </div>
     <a title=\"Back to my account\"href=\"{{ path('account') }}\"><i class='fas fa-angle-left' style='font-size:15px'></i> Return to My Account</a>
 {% endblock %}
-", "account/order.html.twig", "C:\\Users\\Acer\\ecommerce-symfony\\templates\\account\\order.html.twig");
+", "account/order.html.twig", "C:\\Users\\Acer\\banazonweb\\templates\\account\\order.html.twig");
     }
 }

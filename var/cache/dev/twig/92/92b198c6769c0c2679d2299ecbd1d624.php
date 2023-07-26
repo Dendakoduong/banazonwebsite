@@ -85,7 +85,7 @@ class __TwigTemplate_11de040d9e1b564f695734a04f392fb4 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h2 class=\"mb-4\">Register an Address</h2>
+        echo "    <h2 class=\"mb-4\">My Address</h2>
     ";
         // line 7
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 7, $this->source); })()), 'form_start');
@@ -125,7 +125,7 @@ class __TwigTemplate_11de040d9e1b564f695734a04f392fb4 extends Template
         echo "</div>
         <div class=\"col-md-6\">";
         // line 17
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 17, $this->source); })()), "company", [], "any", false, false, false, 17), 'row', ["label" => "Company"]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 17, $this->source); })()), "company", [], "any", false, false, false, 17), 'row', ["label" => "Company (Optional)"]);
         echo "</div>
         <div class=\"col-md-12\">";
         // line 18
@@ -172,7 +172,7 @@ class __TwigTemplate_11de040d9e1b564f695734a04f392fb4 extends Template
 {% block title %}My Address{% endblock %}
 
 {% block body %}
-    <h2 class=\"mb-4\">Register an Address</h2>
+    <h2 class=\"mb-4\">My Address</h2>
     {{ form_start(form) }}
     <div class=\"row\">
         <div class=\"col-md-12\">{{ form_row(form.name, {'label': 'Name'}) }}</div>
@@ -183,13 +183,13 @@ class __TwigTemplate_11de040d9e1b564f695734a04f392fb4 extends Template
         <div class=\"col-md-6\">{{ form_row(form.city, {'label': 'City'}) }}</div>
         <div class=\"col-md-6\">{{ form_row(form.country, {'label': 'Country'}) }}</div>
         <div class=\"col-md-6\">{{ form_row(form.phone, {'label': 'Phone'}) }}</div>
-        <div class=\"col-md-6\">{{ form_row(form.company, {'label': 'Company'}) }}</div>
+        <div class=\"col-md-6\">{{ form_row(form.company, {'label': 'Company (Optional)'}) }}</div>
         <div class=\"col-md-12\">{{ form_row(form.submit, {'label': 'Submit'}) }}</div>
     </div>
 
     {{ form_end(form) }}
     <a title=\"Return to Your Account\" href=\"{{ path('account') }}\"><i class='fas fa-angle-left' style='font-size:15px'></i> Return to my account</a>
 {% endblock %}
-", "account/address_form.html.twig", "C:\\Users\\Acer\\ecommerce-symfony\\templates\\account\\address_form.html.twig");
+", "account/address_form.html.twig", "C:\\Users\\Acer\\banazonweb\\templates\\account\\address_form.html.twig");
     }
 }
