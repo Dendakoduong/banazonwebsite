@@ -47,7 +47,10 @@ class OrderCrudController extends AbstractCrudController
             DateTimeField::new('createdAt', 'Date'),
             TextField::new('user.fullname', 'Name'),
             TextField::new('user.email', 'Email'),
-            TextEditorField::new('address', 'Address')->onlyOnDetail(),
+            TextField::new('delivery', 'Delivery Address')->onlyOnDetail()->formatValue(function ($value, $entity) {
+                // Remove the <br> tags and replace with commas
+                return str_replace('<br>', ', ', $entity->getDelivery());
+            }),
             MoneyField::new('total')->setCurrency('USD')->hideOnForm(),
             MoneyField::new('carrierPrice', 'Shipping fee')->setCurrency('USD'),
             ChoiceField::new('state', 'Status')->setChoices([
