@@ -93,8 +93,8 @@ class __TwigTemplate_7a76a315c94d4fbac660636b1cf91eff extends Template
             echo "        <table class=\"table mt-4\">
             <thead>
                 <tr>
-                    <th scope=\"col\">No</th>
                     <th scope=\"col\">Status</th>
+                    <th scope=\"col\">Description</th>
                     <th scope=\"col\">Total</th>
                     <th scope=\"col\">Date </th>
                     <th scope=\"col\">Reference number </th>
@@ -191,8 +191,8 @@ $context["order"], "state", [], "any", false, false, false, 25) == 2)) ? ("In pr
         <table class=\"table mt-4\">
             <thead>
                 <tr>
-                    <th scope=\"col\">No</th>
                     <th scope=\"col\">Status</th>
+                    <th scope=\"col\">Description</th>
                     <th scope=\"col\">Total</th>
                     <th scope=\"col\">Date </th>
                     <th scope=\"col\">Reference number </th>
@@ -220,6 +220,6 @@ $context["order"], "state", [], "any", false, false, false, 25) == 2)) ? ("In pr
     {% endif %}
     <a title=\"Back to my account\"href=\"{{ path('account') }}\" class=\"text-primary\"><i class='fas fa-angle-left' style='font-size:15px'></i> Return to My Account</a>
 {% endblock %}
-", "account/orders.html.twig", "C:\\Users\\Acer\\ecommerce-symfony\\templates\\account\\orders.html.twig");
+", "account/orders.html.twig", "C:\\Users\\Acer\\banazonweb\\templates\\account\\orders.html.twig");
     }
 }

@@ -111,22 +111,22 @@ class __TwigTemplate_5f8f1172914ca8a975fb1159643cf038 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 13
-        echo "    <h2>Details of order ";
+        echo "    <h2>Details of Order #<span class=\"text-info\">";
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 13, $this->source); })()), "reference", [], "any", false, false, false, 13), "html", null, true);
-        echo "</h2>
+        echo "</span></h2>
     <hr>
     <p>
         <b>Order date :</b> ";
         // line 16
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 16, $this->source); })()), "createdAt", [], "any", false, false, false, 16), "d/m/Y"), "html", null, true);
         echo " <br>
-        <b>Status:</b> ";
+        <b>Status:</b><b class=\"text-success\"> ";
         // line 17
         echo (((twig_get_attribute($this->env, $this->source,         // line 18
 (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 18, $this->source); })()), "state", [], "any", false, false, false, 18) == 1)) ? ("Payment accepted") : ((((twig_get_attribute($this->env, $this->source,         // line 19
 (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 19, $this->source); })()), "state", [], "any", false, false, false, 19) == 2)) ? ("In preparation") : ("Shipped"))));
         // line 20
-        echo "<br>
+        echo "</b><br>
         <b>Reference : </b><span>";
         // line 21
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 21, $this->source); })()), "reference", [], "any", false, false, false, 21), "html", null, true);
@@ -184,10 +184,10 @@ class __TwigTemplate_5f8f1172914ca8a975fb1159643cf038 extends Template
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 46
         echo "            <tr>
-                <th>Total price</th>
+                <th>Price</th>
                 <td></td>
                 <td></td>
-                <td class=\"font-weight-bold text-danger\">";
+                <td class=\"font-weight-bold\">";
         // line 50
         echo twig_escape_filter($this->env, twig_number_format_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 50, $this->source); })()), "total", [], "any", false, false, false, 50) / 100), 2, ",", "."), "html", null, true);
         echo " \$</td>
@@ -199,10 +199,10 @@ class __TwigTemplate_5f8f1172914ca8a975fb1159643cf038 extends Template
         // line 55
         echo twig_escape_filter($this->env, twig_number_format_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 55, $this->source); })()), "carrierPrice", [], "any", false, false, false, 55) / 100), 2, ",", "."), "html", null, true);
         echo " \$<br>
-        <b>Subtotal: </b> ";
+       <b class=\"font-weight-bold\">Subtotal: </b><b class=\"text-danger\">";
         // line 56
         echo twig_escape_filter($this->env, twig_number_format_filter($this->env, ((twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 56, $this->source); })()), "carrierPrice", [], "any", false, false, false, 56) + twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 56, $this->source); })()), "total", [], "any", false, false, false, 56)) / 100), 2, ",", "."), "html", null, true);
-        echo " \$
+        echo " \$ </b>
     </div>
     <a title=\"Back to my account\"href=\"";
         // line 58
@@ -246,14 +246,14 @@ class __TwigTemplate_5f8f1172914ca8a975fb1159643cf038 extends Template
 {% endblock %}
 
 {% block body %}
-    <h2>Details of order {{order.reference}}</h2>
+    <h2>Details of Order #<span class=\"text-info\">{{order.reference}}</span></h2>
     <hr>
     <p>
         <b>Order date :</b> {{order.createdAt|date('d/m/Y')}} <br>
-        <b>Status:</b> {{
+        <b>Status:</b><b class=\"text-success\"> {{
             order.state == 1 ? 'Payment accepted' :
             order.state == 2 ? 'In preparation': 'Shipped'
-        }}<br>
+        }}</b><br>
         <b>Reference : </b><span>{{order.reference}}</span><br>
         <b>Carrier:</b> {{order.carrierName}}<br>
         <b>Delivery details:</b> <br>
@@ -280,16 +280,16 @@ class __TwigTemplate_5f8f1172914ca8a975fb1159643cf038 extends Template
             </tr>
         {% endfor %}
             <tr>
-                <th>Total price</th>
+                <th>Price</th>
                 <td></td>
                 <td></td>
-                <td class=\"font-weight-bold text-danger\">{{(order.total / 100)|number_format(2,',','.') }} \$</td>
+                <td class=\"font-weight-bold\">{{(order.total / 100)|number_format(2,',','.') }} \$</td>
             </tr>
     </tbody>
 </table>
     <div class=\"text-right\">
         <b>Shipping fee:</b> {{(order.carrierPrice / 100)|number_format(2,',','.') }} \$<br>
-        <b>Subtotal: </b> {{((order.carrierPrice + order.total) / 100)|number_format(2,',','.') }} \$
+       <b class=\"font-weight-bold\">Subtotal: </b><b class=\"text-danger\">{{((order.carrierPrice + order.total) / 100)|number_format(2,',','.') }} \$ </b>
     </div>
     <a title=\"Back to my account\"href=\"{{ path('account') }}\"><i class='fas fa-angle-left' style='font-size:15px'></i> Return to My Account</a>
 {% endblock %}

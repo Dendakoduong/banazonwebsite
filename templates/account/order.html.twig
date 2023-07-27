@@ -10,14 +10,14 @@
 {% endblock %}
 
 {% block body %}
-    <h2>Details of order {{order.reference}}</h2>
+    <h2>Details of Order #<span class="text-info">{{order.reference}}</span></h2>
     <hr>
     <p>
         <b>Order date :</b> {{order.createdAt|date('d/m/Y')}} <br>
-        <b>Status:</b> {{
+        <b>Status:</b><b class="text-success"> {{
             order.state == 1 ? 'Payment accepted' :
             order.state == 2 ? 'In preparation': 'Shipped'
-        }}<br>
+        }}</b><br>
         <b>Reference : </b><span>{{order.reference}}</span><br>
         <b>Carrier:</b> {{order.carrierName}}<br>
         <b>Delivery details:</b> <br>
@@ -44,16 +44,16 @@
             </tr>
         {% endfor %}
             <tr>
-                <th>Total price</th>
+                <th>Price</th>
                 <td></td>
                 <td></td>
-                <td class="font-weight-bold text-danger">{{(order.total / 100)|number_format(2,',','.') }} $</td>
+                <td class="font-weight-bold">{{(order.total / 100)|number_format(2,',','.') }} $</td>
             </tr>
     </tbody>
 </table>
     <div class="text-right">
         <b>Shipping fee:</b> {{(order.carrierPrice / 100)|number_format(2,',','.') }} $<br>
-        <b>Subtotal: </b> {{((order.carrierPrice + order.total) / 100)|number_format(2,',','.') }} $
+       <b class="font-weight-bold">Subtotal: </b><b class="text-danger">{{((order.carrierPrice + order.total) / 100)|number_format(2,',','.') }} $ </b>
     </div>
     <a title="Back to my account"href="{{ path('account') }}"><i class='fas fa-angle-left' style='font-size:15px'></i> Return to My Account</a>
 {% endblock %}
