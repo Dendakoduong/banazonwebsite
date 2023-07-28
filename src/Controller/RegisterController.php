@@ -35,7 +35,7 @@ class RegisterController extends AbstractController
             $em->flush();
 
             // confirm mail
-            $content = "Hi {$user->getFirstname()} thank you for registering";
+            $content = "Hi {$user->getFirstname()}, thank you for registering";
             (new Mail)->send($user->getEmail(), $user->getFirstname(), "Welcome to Banazon", $content);
 
             // autologin

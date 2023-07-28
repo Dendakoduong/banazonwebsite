@@ -242,7 +242,6 @@ class __TwigTemplate_d098d3c500875922cc54c7e244d39c15 extends Template
             <p class=\"mt-3\">Don't have Banazon account? <a href=\"{{ path('register') }}\">Create account</a></p>
         </div>
     </div>
-{% endblock %}
-", "security/login.html.twig", "C:\\Users\\Acer\\ecommerce-symfony\\templates\\security\\login.html.twig");
+{% endblock %}", "security/login.html.twig", "C:\\Users\\Acer\\banazonweb\\templates\\security\\login.html.twig");
     }
 }

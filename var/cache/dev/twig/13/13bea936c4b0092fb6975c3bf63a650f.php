@@ -187,6 +187,6 @@ class __TwigTemplate_dcf62180ac0e9be13a319d82db89d7d2 extends Template
     </div>
 {% endblock %}
 
-", "register/index.html.twig", "C:\\Users\\Acer\\ecommerce-symfony\\templates\\register\\index.html.twig");
+", "register/index.html.twig", "C:\\Users\\Acer\\banazonweb\\templates\\register\\index.html.twig");
     }
 }

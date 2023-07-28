@@ -47,8 +47,8 @@ class __TwigTemplate_bf784f67a19c3346bf8f6a69a5d89d4f extends Template
 <head>
     <meta charset=\"utf-8\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">
-    <meta name=\"description\" content=\"Bamazon is the shopping website made in Vietnam\">
-    <meta name=\"author\" content=\"Bamazon Team\">
+    <meta name=\"description\" content=\"Banazon is the shopping website made in Vietnam\">
+    <meta name=\"author\" content=\"Banazon Team\">
     <meta name=\"generator\" content=\"Jekyll v4.1.1\">
     <title>";
         // line 9
@@ -187,8 +187,8 @@ class __TwigTemplate_bf784f67a19c3346bf8f6a69a5d89d4f extends Template
 <head>
     <meta charset=\"utf-8\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">
-    <meta name=\"description\" content=\"Bamazon is the shopping website made in Vietnam\">
-    <meta name=\"author\" content=\"Bamazon Team\">
+    <meta name=\"description\" content=\"Banazon is the shopping website made in Vietnam\">
+    <meta name=\"author\" content=\"Banazon Team\">
     <meta name=\"generator\" content=\"Jekyll v4.1.1\">
     <title>{% block title %}Banazon{% endblock %}</title>
 
@@ -222,6 +222,6 @@ class __TwigTemplate_bf784f67a19c3346bf8f6a69a5d89d4f extends Template
     <script src=\"https://code.jquery.com/jquery-3.5.1.slim.min.js\"></script>
     <script src=\"{{asset('assets/js/bootstrap.bundle.js')}}\"></script>
 </body>
-</html>", "base.html.twig", "C:\\Users\\Acer\\ecommerce-symfony\\templates\\base.html.twig");
+</html>", "base.html.twig", "C:\\Users\\Acer\\banazonweb\\templates\\base.html.twig");
     }
 }
