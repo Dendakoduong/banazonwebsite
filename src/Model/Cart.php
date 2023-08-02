@@ -5,7 +5,7 @@ use App\Repository\ProductRepository;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 /**
- * Allows you to manage a shopping cart in session rather than implementing everything in the controller
+ * Allows to manage a shopping cart in session rather than implementing everything in the controller
  */
 class Cart 
 {
@@ -93,7 +93,7 @@ class Cart
 
 
     /**
-     * Retrieves the basket in session, then retrieves the product objects from the database
+     * Retrieves the cart in session, then retrieves the product objects from the database
      * and calculates the totals
      *
      * @return array

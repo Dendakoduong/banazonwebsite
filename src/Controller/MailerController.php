@@ -13,7 +13,7 @@ class MailerController extends AbstractController
     public function index(): Response
     {
         $mail = new Mail();
-        $mail->send('tutabs00244@fpt.edu.vn', 'Test', 'test', 'content');
+        $mail->send('someone@example.com', 'Test', 'test', 'content');
         return $this->redirectToRoute('home');
     }
 }
