@@ -157,7 +157,7 @@ class __TwigTemplate_5fb8b59f34f862ad652c735bb21ae311 extends Template
             </div>
             <br>
             <div class=\"payment-info\">
-                <small>Banazon accepts all major credit cards.</small>
+                <small>Banazon accepts all major credit cards</small>
                 <div class=\"card-logos\">
                     <i class='fab fa-cc-visa' style='font-size:24px'></i>
                     <i class='fab fa-cc-mastercard' style='font-size:24px'></i>
@@ -244,7 +244,7 @@ class __TwigTemplate_5fb8b59f34f862ad652c735bb21ae311 extends Template
             </div>
             <br>
             <div class=\"payment-info\">
-                <small>Banazon accepts all major credit cards.</small>
+                <small>Banazon accepts all major credit cards</small>
                 <div class=\"card-logos\">
                     <i class='fab fa-cc-visa' style='font-size:24px'></i>
                     <i class='fab fa-cc-mastercard' style='font-size:24px'></i>

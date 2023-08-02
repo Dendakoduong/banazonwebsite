@@ -154,8 +154,8 @@ class __TwigTemplate_5332f859eefca8cc3d8749b1d3dc9ab7 extends Template
         <div class=\"col-md-7\">
             <h2 class=\"featurette-heading\">Apple Watch <span class=\"text-muted\">Series 8</span></h2>
             <p class=\"lead\">A healthy leap ahead.</p>
-            <a class=\"btn btn-outline-dark btn-oval\" href=\"https://www.apple.com/apple-watch-series-8/\" role=\"button\">Learn More</a> &nbsp;
-            <a class=\"btn btn-dark btn-oval\" href=\"products/apple-watch-series-8-gps-cellular-gold-41mm\" role=\"button\">Buy</a>
+            <a class=\"btn btn-dark btn-oval\" href=\"https://www.apple.com/apple-watch-series-8/\" role=\"button\">Learn More</a> &nbsp;
+            <a class=\"btn btn-outline-dark btn-oval\" href=\"products/apple-watch-series-8-gps-cellular-gold-41mm\" role=\"button\">Buy</a>
         </div>
         <div class=\"col-md-5\">
             <img class=\"img-fluid rounded\" src=\"";
@@ -253,8 +253,8 @@ class __TwigTemplate_5332f859eefca8cc3d8749b1d3dc9ab7 extends Template
         <div class=\"col-md-7\">
             <h2 class=\"featurette-heading\">Apple Watch <span class=\"text-muted\">Series 8</span></h2>
             <p class=\"lead\">A healthy leap ahead.</p>
-            <a class=\"btn btn-outline-dark btn-oval\" href=\"https://www.apple.com/apple-watch-series-8/\" role=\"button\">Learn More</a> &nbsp;
-            <a class=\"btn btn-dark btn-oval\" href=\"products/apple-watch-series-8-gps-cellular-gold-41mm\" role=\"button\">Buy</a>
+            <a class=\"btn btn-dark btn-oval\" href=\"https://www.apple.com/apple-watch-series-8/\" role=\"button\">Learn More</a> &nbsp;
+            <a class=\"btn btn-outline-dark btn-oval\" href=\"products/apple-watch-series-8-gps-cellular-gold-41mm\" role=\"button\">Buy</a>
         </div>
         <div class=\"col-md-5\">
             <img class=\"img-fluid rounded\" src=\"{{ asset('assets/img/aw.jpg') }}\" alt=\"apple-watch\">
@@ -264,6 +264,6 @@ class __TwigTemplate_5332f859eefca8cc3d8749b1d3dc9ab7 extends Template
 
     <!-- /END THE FEATURETTES -->
 {% endblock %}
-", "home/index.html.twig", "C:\\Users\\Acer\\ecommerce-symfony\\templates\\home\\index.html.twig");
+", "home/index.html.twig", "C:\\Users\\Acer\\banazonweb\\templates\\home\\index.html.twig");
     }
 }
