@@ -14,7 +14,7 @@ class ContactController extends AbstractController
     #[Route('/contact', name: 'contact')]
     public function index(Request $request): Response
     {
-        $form = $this->createForm(ContactType::class);
+        /*  $form = $this->createForm(ContactType::class);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -22,11 +22,11 @@ class ContactController extends AbstractController
             $datas = $form->getData();
             $content = "From : {$datas['firstname']} {$datas['lastname']} <br> Message : {$datas['content']} <br> Email: {$datas['email']}";
             $mail = new Mail();
-            $mail->send('tutabs00244@fpt.edu.vn', 'Banazon', 'Banazon Support', $content);
-        }
+            $mail->send('someone@example.com', 'Banazon', 'Banazon Support', $content);
+        }*/
 
-        return $this->renderForm('contact/index.html.twig', [
+        return $this->renderForm('contact/index.html.twig', /*[
             'form' => $form,
-        ]);
+        ]*/);
     }
 }
